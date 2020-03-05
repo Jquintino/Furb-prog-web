@@ -1,0 +1,16 @@
+.titulo{
+display: block;
+border-bottom: 1px solid #000000;
+  border-radius: 5px 5px 0 0;
+}
+
+p{
+  padding-left: 3.3%;
+  padding-right: 3.3%;
+}
+.img-texto{
+  padding: 1%;
+  background-color:#e0dede ;
+  display: inline-block;
+  text-align: center;
+}
