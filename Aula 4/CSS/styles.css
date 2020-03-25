@@ -1,0 +1,30 @@
+tr:nth-child(odd){
+    background-color: rgb(210, 214, 218);
+}
+th{
+    background-color: white;
+}
+tr:last-child{
+    background-color: red;
+    color: white;
+}
+table{
+    border-style: hidden;
+    border-collapse: collapse;
+}
+td{
+    border: 2px solid rgb(196, 200, 204);
+}
+th{
+    min-width: fit-content;
+}
+footer{
+    text-align: right;
+}
+body{
+    max-width: fit-content;
+}
+h5{
+    border-bottom: 1px solid;
+    border-color: black;
+}
