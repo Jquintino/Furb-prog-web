@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    nav {
+      border: 2px red;
+      background: url('https://img.elo7.com.br/product/zoom/28B28AE/fundo-fotografico-em-tecido-textura-vermelha-2-20x1-50-fundo-em-tecido.jpg');
+      width: 200px;
+    }
+
+    nav a {
+      color: white;
+    }
+
+    nav li {
+      list-style: none;
+    }
+
+    nav ul li ul {
+      display: none;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+      background-color: rgba(100, 100, 100, 0.5);
+    }
+
+    h1 {
+      background: linear-gradient(green, blue);
+      transition: all 1s;
+      text-shadow: 5px 8px 3px gray;
+      box-shadow: 10px 10px 3px gray;
+      border-radius: 10px;
+    }
+
+    h1:hover {
+      background-color: red;
+      transition: all 3s;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      border: 2px solid limegreen;
+      box-shadow: 5px 5px   3px gray;
+    }
+
+    h1.titulo2 {
+      background: radial-gradient(green, blue)
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Menu dinâmico</h1>
+  <h1 class="titulo2">Menu dinâmico</h1>
+
+  <img class="avatar"
+    src="https://avatars1.githubusercontent.com/u/912571?s=400&u=f93fe75196ffca0d3070a571c0e592a406328678&v=4"
+    width="30" alt="avatar">
+
+  <nav>
+    <ul>
+      <li><a href="#menu1">Menu 1</a>
+        <ul>
+          <li><a href="#submenu11">Submenu 1.1</a></li>
+          <li><a href="#submenu12">Submenu 1.2</a></li>
+          <li><a href="#submenu13">Submenu 1.3</a></li>
+        </ul>
+      </li>
+      <li><a href="#menu2">Menu 2</a>
+        <ul>
+          <li><a href="#submenu21">Submenu 2.1</a></li>
+          <li><a href="#submenu22">Submenu 2.2</a></li>
+        </ul>
+      </li>
+      <li><a href="#menu3">Menu 3</a>
+        <ul>
+          <li><a href="#submenu31">Submenu 3.1</a></li>
+          <li><a href="#submenu32">Submenu 3.2</a></li>
+          <li><a href="#submenu33">Submenu 3.3</a></li>
+          <li><a href="#submenu34">Submenu 3.4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>

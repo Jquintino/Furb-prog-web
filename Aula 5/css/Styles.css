@@ -1,0 +1,19 @@
+body{
+    background-color: #cdf0ff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1500px;
+}
+header, nav,footer{
+    background-color: #0066aa;
+    border:solid 10px #ff0000;
+    color:#ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+main{
+    background-color: white;
+    border: solid 10px black;
+    margin-bottom: 10px;
+}

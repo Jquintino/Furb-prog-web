@@ -1,0 +1,47 @@
+body{
+    background-color: #cdf0ff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1500px;
+}
+header, nav,footer{
+    background-color: #0066aa;
+    border:solid 10px #ff0000;
+    color:#ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+nav{
+    display: flex;
+    width: 200px;
+    float: left;
+    height: 500px;
+}
+nav ul{
+    list-style-type: none;
+    width: 100px;
+}
+
+main{
+    background-color: white;
+    border: solid 10px black;
+    margin-bottom: 10px;
+    height: 500px;
+    display: flex;
+}
+.nav_menu{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    display: none;
+
+}
+.mainmenu:hover ul{
+    display: block ;
+}
+.submenu:hover{
+    display: block;   
+}
