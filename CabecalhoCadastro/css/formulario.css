@@ -1,0 +1,22 @@
+#feedback-input {
+    margin-bottom: 10;
+    float: left;
+    width: 50%;
+}
+
+#email-label {
+    display: block;
+}
+
+#opinion-section {
+    margin-bottom: 10;
+}
+
+#email-input {
+    width: 25%;
+}
+
+#feedback-opinion-span {
+    display: flex;
+    flex-direction: column;
+}

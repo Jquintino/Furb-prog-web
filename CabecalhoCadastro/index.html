@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
+   <!-- <link rel="stylesheet" href="css/formulario.css">-->
+    <script src="js/scritps.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="container" id="cabecalho">
+        <div class="row justify-content-end " id="pre-form">
+            <div class="col-5 login-area">
+                <form class="form-login" id="form">
+                    <div class="row">
+                        <div class="col-8">
+                            <label for="Usuario">Usuario:</label>
+                            <input type="text" class="input-group" name="Usuario" id="Usuario">
+                            <label for="senha">Senha:</label>
+                            <input type="password" class="input-group" name="senha" id="senha"></div>
+                        <div class="col-2  justify-content-center">
+                            <input type="submit" value="Login" id="login" class="form-group btn-dark btn-submit"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <h1>Terraria 1.4</h1>
+        </div>
+    </nav>
+    <nav class="menu sticky" id="menu">
+
+        <ul class="nav-list list-group bg-default">
+            <li class="list-group-item bg-default"><a href="#introducao">Introdução</a></li>
+            <li class="list-group-item bg-default"><a href="#resumo">Resumo</a></li>
+            <li class="list-group-item bg-default"><a href="#Pontos">Pontos principais</a></li>
+            <div class="dropright" id="dropdown"><li class="list-group-item bg-default dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a >Detalhamento</a>
+                <div class="dropdown-menu menu" id="submenu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item bg-default" href="#detalhe">op1</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item bg-default" href="#detalhe">op2</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item bg-default" href="#detalhe">op3</a>
+                </div>
+            </li></div>
+            <li class="list-group-item bg-default"><a href="#feedback">Deixe sua opinião</a></li>
+        </ul>
+
+    </nav>
+    <script src="js/menu.js"></script>
+    <div id="main-content" class="container">
+        <div class="row">
+            <div clas="col-8" id="introducao">
+                <h2>Introdução</h2>
+                <img src="img/1767fb3976328cd473ce504e1aac9ed3155c5e29.png" alt="" srcset="">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+        <div class="row" id="resumo">
+            <div clas="col-8">
+                <h2>Resumo</h2>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+        <div class="row" id="Pontos">
+            <div clas="col-8">
+                <h2>Pontos principais</h2>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+        <div class="row" id="detalhe">
+            <div clas="col-8">
+                <h2>Detalhamento</h2>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+        <div class="row" id="feedback">
+            <div clas="col-8">
+                <h2>Deixe a sua opinião</h2>
+                <form action="">
+                    <p>Gostaria de receber novidades e dar um feedback?</p>
+                    <label id="email-label" for="email-input">E-mail: </label>
+                    <input type="email" class="input-group" name="email" id="email-input">
+                    <span id="feedback-opinion-span">
+                        <label id="feedback-label" for="feedback-input">Feedback:</label>
+                        <textarea name="feedback" class="input-group" id="feedback-input"
+                            placeholder="Gostei muito desse trabalho, melhor que eu já vi" cols="50"
+                            rows="10"></textarea>
+                        <section style="background-color: white;" id="opinion-section">
+                            <label>
+                                <input type="radio" name="avaliacao" id="upvote-radio" value="cimavoto">
+                                Amei
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name="avaliacao" id="downvote-radio" value="baixovoto">
+                                Pode melhorar
+                            </label>
+                        </section>
+                    </span>
+                    <input id="enviar-avaliacao-button" type="submit" class="form-group btn-dark" value="Enviar avaliação">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>

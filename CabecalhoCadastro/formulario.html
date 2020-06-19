@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="formulario.css">
+<form action="">
+    <p>Gostaria de receber novidades e dar um feedback?</p>
+    <label id="email-label" for="email-input">E-mail: </label>
+    <input type="email" name="email" id="email-input">
+    <span id="feedback-opinion-span">
+        <label id="feedback-label" for="feedback-input">Feedback:</label>
+        <textarea name="feedback" id="feedback-input" placeholder="Gostei muito desse trabalho, melhor que eu já vi"
+            cols="50" rows="10"></textarea>
+        <section style="background-color: white;" id="opinion-section">
+            <label>
+                <input type="radio" name="avaliacao" id="upvote-radio" value="cimavoto">
+                Amei
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="avaliacao" id="downvote-radio" value="baixovoto">
+                Pode melhorar
+            </label>
+        </section>
+    </span>
+    <input id="enviar-avaliacao-button" type="submit" value="Enviar avaliação">
+</form>

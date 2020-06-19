@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 07 - jQuery</title>
+  <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./Scripts.js"></script>
+  <style>
+    * {
+      font-family: "Comic Neue";
+    }
+
+    header {
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+    }
+
+    header img {
+      height: 100px;
+    }
+
+    .vermelho {
+      color: red;
+    }
+
+    .azul {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="http://dsc.inf.furb.br/arquivos/logos/furb.jpg">
+    <div>
+      <p>Universidade Regional de Blumenau</p>
+      <p>Disciplina: Programação III</p>
+      <p>Professor: Jonathan Manoel Borges</p>
+    </div>
+  </header>
+
+  <hr>
+  <h1>Atividade - jQuery</h1>
+  <p>A seguir, são apresentadas algumas questões.</p>
+  <p>Todos as questões devem ser desenvolvidas utilizando a biblioteca jQuery.</p>
+  <strong>Referências</strong>
+  <ul>
+    <li><a href="https://www.w3schools.com/jquery/default.asp" target="_blank">jQuery - w3schools</a></li>
+    <li><a href="https://jquery.com/" target="_blank">jQuery - oficial</a></li>
+  </ul>
+
+
+
+  <!-- Questão 01 -->
+  <section id="questao01">
+    <hr>
+    <h2>Questão 01</h2>
+    <p>Adicione o jQuery a esta página (utilize referência para um link CDN - Content Delivery Network)</p>
+  </section>
+
+
+
+  <!-- Questão 02 -->
+  <section id="questao02">
+    <hr>
+    <h2>Questão 02</h2>
+    <h3>Dado o conteúdo de exemplo abaixo, faça</h3>
+    <ul>
+      <li>ao clicar <button id="bt1">Neste botão</button>: esconder todos os "p" (parágrafos) abaixo com a class ".vermelho"</li>
+      <li>ao clicar <button id="bt2">Neste botão</button>: esconder todos os "p" (parágrafos) ímpares abaixo</li>
+      <li>ao clicar <button id="bt3">Neste botão</button>: adicione o texto " - par" em todos os "p" (parágrafos) pares abaixo</li>
+      <li>ao clicar <button id="bt4">Neste botão</button>: em todos os elementos com a class ".vermelho" abaixo, remove a class "vermelho" e adicione a class "azul"</li>
+      <li>ao clicar <button id="bt5">Neste botão</button>: mude o texto do primeiro parágrafo abaixo para: "texto do primeiro p alterado"</li>
+      <li>ao clicar <button id="bt6">Neste botão</button>: mude o texto do último parágrafo abaixo para: "texto do último p alterado"</li>
+      <li>ao clicar <button id="bt7">Neste botão</button>: mude a cor de background do <strong>quinto parágrafo</strong> abaixo para verde</li>
+      <li>ao clicar <button id="bt8">Neste botão</button>: mude a primeira imagem que aparece nesta página, para: "http://www.furb.br/web/img/logo-furb.gif"</li>
+      <li>ao clicar <button id="bt9">Neste botão</button>: todo o conteúdo da seção "questao02" deve ser escondido, durante 1500 milissegundo, em seguida deve ser apresentado novamente no intervalo de 1500 milissegundos</li>
+    </ul>
+    <h3 class="vermelho">Conteúdo de exemplo</h3>
+    <p id="p1">Parágrafo 01</p>
+    <p>Parágrafo 02</p>
+    <p class="vermelho">Parágrafo 03</p>
+    <p class="vermelho">Parágrafo 04</p>
+    <p>Parágrafo 05</p>
+    <p>Parágrafo 06</p>
+    <p>Parágrafo 07</p>
+    <p id="p8">Parágrafo 08</p>
+
+    <h3>Solução</h3>
+    <!-- digite seu código aqui -->
+
+  </section>
+
+
+  <!-- Questão 03 -->
+  <section id="questao03">
+    <hr>
+    <h2>Questão 03</h2>
+    <ul>
+      <li>Crie uma tabela 20 x 20 (20 linhas e 20 colunas). Pode ser utilizando HTML puro, ou javascript.</li>
+      <li>Cada célula da tabela deve estar preenchida com algum texto diferente. Se deseja, pode utilizar os índices de linha e coluna. Ex: célula 1x1, célula 1x2, etc.</li>
+      <li>Formate a tabela com CSS, para que cada célula tenha bordas.</li>
+      <li>Ao clicar em qualquer célula da tabela, deve-se apresentar um alert com o conteúdo desta célula.</li>
+    </ul>    
+
+    <h3>Solução</h3>
+    
+    
+  </section>
+
+
+  <!-- Questão 04 -->
+  <section id="questao04">
+    <hr>
+    <h2>Questão 04</h2>
+    <p>Utilizando HTML e jQuery cria a lista dinâmica ilustrada a seguir:</p>
+    <img src="lista_dinamica.png">
+    <p>Onde:</p>
+    <ul>
+      <li>No início da lista, deve haver um campo input, seguido de um link "(adicionar)"
+        <ul>
+          <li>Ao clicar no link "(adicionar)", deve-se validar se algum texto foi digitado no input.</li>
+          <li>Se não preenchido, mostrar alerta que o input deve ser preenchido.</li>
+          <li>Se preenchido, um novo item "li" deve ser adicionado na lista.</li>
+          <li>O link "(cancelar)" somente deve estar visível, caso o campo input não estiver em branco.</li>
+          <li>Ao clicar no link "(cancelar)" o campo input deve ser limpo e consequentemente o link "(cancelar)" deve
+            ser ocultado.</li>
+        </ul>
+      </li>
+      <li>em cada um dos itens adicionado, deve haver o link "(remover)". Ao clicá-lo, o respectivo item da lista deve ser removido da lista</li>
+    </ul>
+
+    
+    <h3>Solução</h3>
+
+    
+      <input type="text" name="" id="texto">
+      <a  id="adiciona">Adicionar</a>
+      <a  id="cancela">Cancelar</a>
+
+      <ul id="lista"></ul>
+    
+  
+  </section>
+
+
+  <!-- Questão 05 -->
+  <section id="questao05">
+    <hr>
+    <h2>Questão 05</h2>
+    <p>Utilizando HTML, CSS e jQuery, cria a funcionalidade de expandir/recolher ilustrada a seguir:</p>
+    <img src="expandir-recolher.gif">
+    <h3>Referencias</h3>
+    <ul>
+      <li><a href="https://www.w3schools.com/jquery/jquery_hide_show.asp">Hide/Show</a></li>
+      <li><a href="https://www.w3schools.com/jquery/jquery_traversing.asp">Traversing</a></li>
+      <li><a href="https://www.w3schools.com/jquery/jquery_traversing_ancestors.asp">Parents</a></li>
+    </ul>
+
+    <h3>Solução</h3>
+    <!-- digite seu código aqui -->
+  </section>
+
+</body>
+
+</html>
