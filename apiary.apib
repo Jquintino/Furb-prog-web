@@ -3,78 +3,221 @@ HOST: https://polls.apiblueprint.org/
 
 # Jquintino 
 
-Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
 
-### List All Questions [GET]
+
+## Comandas [/comanda]
+
+É uma api que controla uma comanda de um restaurante
+
+### Lista todas as comandas [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "id":"1"
+                "mesa": "23"
+            },
+            {
+                "id":"2"
+                "mesa": "42"
             }
         ]
 
-### Create a New Question [POST]
+### Cadastrar comanda [POST]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
++ Request
+        
+        [
+            {
+                "mesa":"43",
+                "estado":"Ativo"
+            }
+        ]
 
-+ Request (application/json)
++ Response 204 (application/json)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+
+## Gerenciar a comanda [/comanda/{id_comanda}]
+
+### Ver comanda [GET]
 
 + Response 201 (application/json)
 
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
+        [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "id":"2"
+                "mesa":"42",
+                "estado":"ativo",
+                "produtos":[
+                                {
+                                    "numero_produto":"1",
+                                    "nome":"Refri",
+                                    "Qtd":"2",
+                                    "preco":"2.00"
+                                },
+                                {
+                                    "numero_produto":"2",
+                                    "nome":"Batatinhas",
+                                    "Qtd":"1",
+                                    "preco":"20.00"
+                                }
+                            ]
             }
+        ]
+
+### Atualizar Comanda[PUT]
+
+
++ Request
+        
+        [
+            {
+                "mesa":"42",
+                "estado":"Fechada"
+            }
+        ]
+
++ Response 204 (application/json)
+
+### Excluir comanda[DELETE]
+
++ Response 204 (application/json)
+
+## Produtos na comanda [/comanda/{id_comanda}/produto]
+
+### Visualizar produtos da comanda[GET]
+
++ Response 201 (application/json)
+
+        [
+            {
+                "numero_na_comanda":"1",
+                "id_produto":"55",
+                "nome":"Refri",
+                "Qtd":"2",
+                "preco":"2.00"
+            },
+            {
+                "numero_na_comanda":"2",
+                "id_produto":"66",
+                "nome":"Batatinhas",
+                "Qtd":"1",
+            "preco":"20.00"
+            }
+        ]
+        
+### Adicionar produto na comanda [POST]
+
++ Request (application/json)
+
+        [
+            {
+              "id_produto":"55",
+              "qtd":"1"
+            }
+        ]
+    
+
++ Response 204 (application/json)
+
+## Gerenciar produtos na comanda [/comanda/{id_comanda}/produto/{id_produto}]
+
+### Ver produto da comanda [GET]
+
++ Response 201 (application/json)
+
+        [
+            {
+                "numero_produto":"1",
+                "nome":"Refri",
+                "Qtd":"2",
+                "preco":"2.00"
+            }
+        ]
+
+### Atualizar produto Comanda[PUT]
+
+
++ Request
+        
+        [
+            {
+                "numero_produto":"1",
+                "Qtd":"3"
+            }
+        ]
+
++ Response 204 (application/json)
+
+### Excluir produto comanda[DELETE]
+
++ Response 204 (application/json)
+
+
+## Produtos [/produto]
+
+### Visualizar todos os produtos[GET]
+
++ Response 201 (application/json)
+
+        [
+            {
+                "id_produto":"55",
+                "nome":"Refri",
+                "preco":"2.00"
+            },
+            {
+                "id_produto":"66",
+                "nome":"Batatinhas",
+                "preco":"20.00"
+            }
+        ]
+        
+### Adicionar produto [POST]
+
++ Request (application/json)
+
+        [
+            {
+                "nome":"Petisco",
+                "preco":"30.00"
+            }
+        ]
+    
+
++ Response 204 (application/json)
+
+
+## Gerenciar Produto [/produto/{id}]
+
+### Ver produto [GET]
+
++ Response 201 (application/json)
+
+        [
+            {
+                "nome":"Refri",
+                "preco":"2.00"
+            }
+        ]
+
+
+### Atualizar produto[PUT]
+
+
++ Request
+        
+        [
+            {
+                "nome":"Refri - Coca-cola",
+                "preco":"2.50"
+            }
+        ]
+
++ Response 204 (application/json)
+
+### Excluir comanda[DELETE]
+
++ Response 204 (application/json)
