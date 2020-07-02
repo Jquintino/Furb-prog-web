@@ -2,13 +2,12 @@
 var sql = require('../db.js');
 
 //comanda object constructor
-var Comanda = function(task){
-    this.task = task.task;
-    this.status = task.status;
-    this.created_at = new Date();
+var Comanda = function(comanda){
+    this.mesa = comanda.mesa;
+    this.estado = comanda.estado;
 };
 Comanda.createComanda = function (newComanda, result) {    
-        sql.query("INSERT INTO comanda set ?", newTask, function (err, res) {
+        sql.query("INSERT INTO comanda set ?", newComanda, function (err, res) {
                 
                 if(err) {
                     console.log("error: ", err);
