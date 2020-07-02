@@ -1,34 +1,36 @@
 'use strict';
 module.exports = function (app) {
-    var todoList = require('../controller/appController');
-
-    // todoList Routes
+    var comandaController = require('../controller/appController');
+    var produtoComandaController = require('../controller/ProdutoComandaController');
+    var produtoController = require('../controller/ProdutoController');
+    var UsuariosController = require('../controller/UsuariosController');
+    // comandaController Routes
     app.route('/comandas')
-        .get(todoList.list_all_comanda)
-        .post(todoList.create_a_comanda);
+        .get(comandaController.list_all_comanda)
+        .post(comandaController.create_a_comanda);
 
     app.route('/comanda/:Id')
-        .get(todoList.read_a_Comanda)
-        .put(todoList.update_a_comanda)
-        .delete(todoList.delete_a_comanda);
+        .get(comandaController.read_a_Comanda)
+        .put(comandaController.update_a_comanda)
+        .delete(comandaController.delete_a_comanda);
 
-/*
+
     app.route('/comanda/:Id/produtos')
-        .get(todoList.list_all_produtos_comanda)
-        .post(todoList.create_a_produto_comanda);
+        .get(produtoComandaController.list_all_produtos_comanda)
+        .post(produtoComandaController.create_a_produto_comanda);
 
     app.route('/comanda/:Id/produto/:id_produto')
-        .get(todoList.read_a_produto_Comanda)
-        .put(todoList.update_a_produto_comanda)
-        .delete(todoList.delete_a_produto_comanda);
+        .get(produtoComandaController.read_a_produto_comanda)
+        .put(produtoComandaController.update_a_produto_comanda)
+        .delete(produtoComandaController.delete_a_produto_comanda);
 
     app.route('/produtos')
-        .get(todoList.list_all_produto)
-        .post(todoList.create_a_produto);
+        .get(produtoController.list_all_produtos)
+        .post(produtoController.create_a_produto);
 
     app.route('/produto/:Id')
-        .get(todoList.read_a_produto)
-        .put(todoList.update_a_produto)
-        .delete(todoList.delete_a_produto);
-*/
+        .get(produtoController.read_a_produto)
+        .put(produtoController.update_a_produto)
+        .delete(produtoController.delete_a_produto);
+
 };
