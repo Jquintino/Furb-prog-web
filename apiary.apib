@@ -15,13 +15,66 @@ HOST: https://polls.apiblueprint.org/
 + Response 200 (application/json)
 
         [
-            {
-                "id":"1"
-                "mesa": "23"
+             {
+                "id": 1,
+                "mesa": "mesa 1",
+                "estado": "1",
+                "timestamp": "2020-07-03T02:30:17.000Z",
+                "produtos": [
+                    {
+                        "id": 1,
+                        "qtd": 2,
+                        "id_produto": {
+                            "id": 1,
+                            "desc": "Refri",
+                            "preco": 2.5
+                        }
+                    },
+                    {
+                        "id": 8,
+                        "qtd": 1,
+                        "id_produto": {
+                            "id": 3,
+                            "desc": "Cerva",
+                            "preco": 3.89
+                        }
+                    },
+                    {
+                        "id": 15,
+                        "qtd": 2,
+                        "id_produto": {
+                            "id": 4,
+                            "desc": "Batata Frita",
+                            "preco": 15
+                        }
+                    }
+                ]
             },
             {
-                "id":"2"
-                "mesa": "42"
+                "id": 3,
+                "mesa": "Mesa 2",
+                "estado": "1",
+                "timestamp": "2020-07-09T03:31:55.000Z",
+                "produtos": [
+                    {
+                        "id": 13,
+                        "qtd": 3,
+                        "id_produto": {
+                            "id": 3,
+                            "desc": "Cerva",
+                            "preco": 3.89
+                        }
+                    },
+                    {
+                        "id": 14,
+                        "qtd": 1,
+                        "id_produto": {
+                            "id": 1,
+                            "desc": "Refri",
+                            "preco": 2.5
+                        }
+                    }
+                ]
             }
         ]
 
@@ -31,7 +84,7 @@ HOST: https://polls.apiblueprint.org/
         
         [
             {
-                "mesa":"43",
+                "mesa":"Mesa 43",
                 "estado":"Ativo"
             }
         ]
@@ -43,27 +96,43 @@ HOST: https://polls.apiblueprint.org/
 
 ### Ver comanda [GET]
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
         [
             {
-                "id":"2"
-                "mesa":"42",
-                "estado":"ativo",
-                "produtos":[
-                                {
-                                    "numero_produto":"1",
-                                    "nome":"Refri",
-                                    "Qtd":"2",
-                                    "preco":"2.00"
-                                },
-                                {
-                                    "numero_produto":"2",
-                                    "nome":"Batatinhas",
-                                    "Qtd":"1",
-                                    "preco":"20.00"
-                                }
-                            ]
+                "id": 1,
+                "mesa": "mesa 1",
+                "estado": "1",
+                "timestamp": "2020-07-03T02:30:17.000Z",
+                "produtos": [
+                    {
+                        "id": 1,
+                        "qtd": 2,
+                        "id_produto": {
+                            "id": 1,
+                            "desc": "Refri",
+                            "preco": 2.5
+                        }
+                    },
+                    {
+                        "id": 8,
+                        "qtd": 1,
+                        "id_produto": {
+                            "id": 3,
+                            "desc": "Cerva",
+                            "preco": 3.89
+                        }
+                    },
+                    {
+                        "id": 15,
+                        "qtd": 2,
+                        "id_produto": {
+                            "id": 4,
+                            "desc": "Batata Frita",
+                            "preco": 15
+                        }
+                    }
+                ]
             }
         ]
 
@@ -74,8 +143,8 @@ HOST: https://polls.apiblueprint.org/
         
         [
             {
-                "mesa":"42",
-                "estado":"Fechada"
+                "mesa":"Mesa 42",
+                "estado":"0"
             }
         ]
 
@@ -85,7 +154,7 @@ HOST: https://polls.apiblueprint.org/
 
 + Response 204 (application/json)
 
-## Produtos na comanda [/comanda/{id_comanda}/produto]
+## Produtos na comanda [/produtoComandas]
 
 ### Visualizar produtos da comanda[GET]
 
@@ -93,20 +162,27 @@ HOST: https://polls.apiblueprint.org/
 
         [
             {
-                "numero_na_comanda":"1",
-                "id_produto":"55",
-                "nome":"Refri",
-                "Qtd":"2",
-                "preco":"2.00"
+                "id": 1,
+                "qtd": 2,
+                "timestamp": "2020-07-07T00:11:45.000Z",
+                "id_produto": {
+                    "id": 1,
+                    "desc": "Refri",
+                    "preco": 2.5
+                }
             },
             {
-                "numero_na_comanda":"2",
-                "id_produto":"66",
-                "nome":"Batatinhas",
-                "Qtd":"1",
-            "preco":"20.00"
+                "id": 8,
+                "qtd": 1,
+                "timestamp": "2020-07-12T02:24:11.000Z",
+                "id_produto": {
+                    "id": 3,
+                    "desc": "Cerva",
+                    "preco": 3.89
+                }
             }
         ]
+
         
 ### Adicionar produto na comanda [POST]
 
@@ -114,26 +190,31 @@ HOST: https://polls.apiblueprint.org/
 
         [
             {
+              "id_comanda":"1"
               "id_produto":"55",
               "qtd":"1"
             }
         ]
     
 
-+ Response 204 (application/json)
++ Response 200 (application/json)
 
-## Gerenciar produtos na comanda [/comanda/{id_comanda}/produto/{id_produto}]
+## Gerenciar produtos na comanda [/produtoComanda/{id_comanda}]
 
 ### Ver produto da comanda [GET]
 
 + Response 201 (application/json)
 
         [
-            {
-                "numero_produto":"1",
-                "nome":"Refri",
-                "Qtd":"2",
-                "preco":"2.00"
+             {
+                "id": 1,
+                "qtd": 2,
+                "timestamp": "2020-07-07T00:11:45.000Z",
+                "id_produto": {
+                    "id": 1,
+                    "desc": "Refri",
+                    "preco": 2.5
+                }
             }
         ]
 
@@ -165,12 +246,12 @@ HOST: https://polls.apiblueprint.org/
         [
             {
                 "id_produto":"55",
-                "nome":"Refri",
+                "desc":"Refri",
                 "preco":"2.00"
             },
             {
                 "id_produto":"66",
-                "nome":"Batatinhas",
+                "desc":"Batatinhas",
                 "preco":"20.00"
             }
         ]
@@ -181,7 +262,7 @@ HOST: https://polls.apiblueprint.org/
 
         [
             {
-                "nome":"Petisco",
+                "desc":"Petisco",
                 "preco":"30.00"
             }
         ]
@@ -198,7 +279,7 @@ HOST: https://polls.apiblueprint.org/
 
         [
             {
-                "nome":"Refri",
+                "desc":"Refri",
                 "preco":"2.00"
             }
         ]
@@ -211,7 +292,7 @@ HOST: https://polls.apiblueprint.org/
         
         [
             {
-                "nome":"Refri - Coca-cola",
+                "desc":"Refri - Coca-cola",
                 "preco":"2.50"
             }
         ]
